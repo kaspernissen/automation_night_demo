@@ -4,6 +4,8 @@ kind: Service
 metadata:
   labels:
     name: grafana
+    visualize: "true"
+    run: grafana
   name: grafana
 spec:
   selector:
@@ -30,6 +32,7 @@ spec:
       name: grafana
       labels:
         app: grafana
+        run: movie-service
     spec:
       containers:
       - name: grafana

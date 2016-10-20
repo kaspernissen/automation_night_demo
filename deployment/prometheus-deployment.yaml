@@ -6,6 +6,7 @@ metadata:
     prometheus.io/scrape: 'true'
   labels:
     name: prometheus
+    visualize: "true"
   name: prometheus
 spec:
   selector:
@@ -32,6 +33,7 @@ spec:
       name: prometheus
       labels:
         app: prometheus
+        visualize: "true"
     spec:
       containers:
       - name: prometheus
