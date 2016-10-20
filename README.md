@@ -5,7 +5,7 @@ This is a demo that illustrates how Prometheus can be used to monitor a Kubernet
 Additions to the guide has been created to add Grafana, to show of the visualization of the metrics scrape by Prometheus. 
 
 
-To run: (make sure you have vagrant installed)
+To run: (make sure you have vagrant and kubectl installed)
 
 ``` bash
 $ ./cluster_up.sh
