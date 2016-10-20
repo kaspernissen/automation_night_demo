@@ -1,6 +1,6 @@
 # Demo for Automation Night Aarhus (1. November 2016)
 
-This is a demo that illustrates how Prometheus can be used to monitor a Kubernetes cluster. The demo is build by leveraging the awesome guide that CoreOS provides to setup a local Kubernetes cluster, along with there other guide to deploy Prometheus on the cluster to start monitoring.
+This is a demo that illustrates how Prometheus can be used to monitor a Kubernetes cluster. The demo is built by leveraging the awesome guide that [CoreOS](https://coreos.com/blog/prometheus-and-kubernetes-up-and-running.html) provides to setup a local Kubernetes cluster, along with there other guide to deploy Prometheus on the cluster to start monitoring.
 
 Additions to the guide has been created to add Grafana, to show of the visualization of the metrics scrape by Prometheus. 
 
