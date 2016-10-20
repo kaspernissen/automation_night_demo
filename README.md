@@ -21,8 +21,8 @@ $ kubectl config use-context vagrant-multi
 
 Once the kubernetes cluster is up and running. Verify with
 
-```
-kubectl get nodes
+```bash
+$ kubectl get nodes
 ```
 
 We can now deploy Prometheus and Grafana on the cluster as follows:
