@@ -46,3 +46,8 @@ To add dashboards in Grafana, first add Prometheus as a datasource, see the imag
 
 Once Prometheus is installed as a datasource, add the dashboards by clicking on the dashboard menu, and choose "Import", next "Upload .json File", locate the file in the dashboard directory and press OK and Load. 
 
+If you would like to play around with the Kubernetes built-in dashboard, you can access it via a proxy:
+```bash
+kubectl proxy http://localhost:8001/ui
+```
+
