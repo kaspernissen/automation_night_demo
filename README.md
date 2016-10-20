@@ -33,7 +33,7 @@ $ ./prom_graf_up.sh
 
 Shortly here after, you should be able to login:
 
-Grafana:
+Grafana: (grafana default user/password is admin/admin)
 http://172.17.4.101:30300/login
 
 Prometheus:
