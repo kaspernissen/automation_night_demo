@@ -7,8 +7,16 @@ Additions to the guide has been created to add Grafana, to show of the visualiza
 
 To run: (make sure you have vagrant and kubectl installed)
 
-``` bash
-$ ./cluster_up.sh
+```bash
+$ cd coreos-kubernetes/multi-node/vagrant
+$ vagrant up
+$ export KUBECONFIG="${KUBECONFIG}:$(pwd)/kubeconfig"
+
+$ kubectl config use-context vagrant-multi
+$ kubectl config set-cluster vagrant-multi-cluster --server=https://172.17.4.101:443 --certificate-authority=${PWD}/ssl/ca.pem
+$ kubectl config set-credentials vagrant-multi-admin --certificate-authority=${PWD}/ssl/ca.pem --client-key=${PWD}/ssl/admin-key.pem --client-certificate=${PWD}/ssl/admin.pem
+$ kubectl config set-context vagrant-multi --cluster=vagrant-multi-cluster --user=vagrant-multi-admin
+$ kubectl config use-context vagrant-multi
 ```
 
 Once the kubernetes cluster is up and running. Verify with
