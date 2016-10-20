@@ -34,7 +34,7 @@ http://172.17.4.101:30900
 
 To add dashboards in Grafana, first add Prometheus as a datasource, see the image:
 
-![Prometheus Datasource](https://github.com/kaspernissen/automation_night_demo/blob/master/prometheus_ds.png "How to setup Prometheus Datasource" {width=400px height=400px}) 
+![Prometheus Datasource](https://github.com/kaspernissen/automation_night_demo/blob/master/prometheus_ds.png "How to setup Prometheus Datasource") 
 
 Once Prometheus is installed as a datasource, add the dashboards by clicking on the dashboard menu, and choose "Import", next "Upload .json File", locate the file in the dashboard directory and press OK and Load. 
 
