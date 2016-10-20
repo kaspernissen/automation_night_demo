@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd coreos-kubernetes/multi-node/vagrant
+cd kubernetes/multi-node/vagrant
 vagrant up
 
 export KUBECONFIG="${KUBECONFIG}:$(pwd)/kubeconfig"
