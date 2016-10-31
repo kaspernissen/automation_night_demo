@@ -5,7 +5,7 @@ metadata:
   labels:
     name: grafana
     visualize: "true"
-    run: grafana
+    app: grafana
   name: grafana
 spec:
   selector:
@@ -32,7 +32,8 @@ spec:
       name: grafana
       labels:
         app: grafana
-        run: movie-service
+        visualize: "true"
+        run: grafana
     spec:
       containers:
       - name: grafana

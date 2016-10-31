@@ -4,3 +4,4 @@ kubectl create -f deployment/prometheus-configmap-2.yaml
 kubectl create -f deployment/prometheus-deployment.yaml
 kubectl create -f deployment/node-exporter.yaml
 kubectl create -f deployment/grafana-deployment.yaml
+kubectl create -f deployment/pushgateway-deployment.yaml

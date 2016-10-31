@@ -25,7 +25,7 @@ Once the kubernetes cluster is up and running. Verify with
 $ kubectl get nodes
 ```
 
-We can now deploy Prometheus and Grafana on the cluster as follows:
+We can now deploy Prometheus and Grafana on the cluster as follows: (from the root of this repo)
 
 ```bash
 $ ./prom_graf_up.sh
@@ -39,6 +39,9 @@ http://172.17.4.101:30300/login
 Prometheus:
 http://172.17.4.101:30900
 
+Pushgateway:
+http://172.17.4.101:30901
+
 
 To add dashboards in Grafana, first add Prometheus as a datasource, see the image:
 
@@ -51,3 +54,11 @@ If you would like to play around with the Kubernetes built-in dashboard, you can
 kubectl proxy http://localhost:8001/ui
 ```
 
+# Prometheus Pushgateway
+
+Simple example of how to push metrics to the pushgateway:
+
+```bash
+echo 'mysql_deleted_rows{label="somelabel"} 42' | curl --data-binary @- http://172.17.4.101:30901/metrics/job/cleanup/instance/database
+```
+When prometheus has scaped the gateway, your metric should be available.
